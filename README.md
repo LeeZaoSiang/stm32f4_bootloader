@@ -42,7 +42,8 @@ The CRC-32 checksum of the target BIN file must be calculated and embedded into 
     │   └── STM32F4xx_HAL_DRIVER         # STM32F4 HAL drivers
     ├── FATFS                            # FAT filesystem application files
     ├── Middlewares                      # USB Host library
-    └── USB_HOST                        # USB Host application files
+    ├── USB_HOST                         # USB Host application files
+    └── Devices                          # Target MCU linker and startup files
 
 ---
 

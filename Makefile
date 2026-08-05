@@ -78,7 +78,7 @@ Core/Src/syscalls.c
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32f411xe.s
+Devices/stm32f411xx/startup_stm32f411xe.s
 
 # ASMM sources
 ASMM_SOURCES = 
@@ -124,7 +124,7 @@ MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
 # AS defines
 AS_DEFS = 
 
-# C defines
+# C defines (Define the STM32F4 MCU here)
 C_DEFS =  \
 -DUSE_HAL_DRIVER \
 -DSTM32F411xE
@@ -167,7 +167,7 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 # LDFLAGS
 #######################################
 # link script
-LDSCRIPT = STM32F411XX_FLASH.ld
+LDSCRIPT = Devices/stm32f411xx/STM32F411XX_FLASH.ld
 
 # libraries
 LIBS = -lc -lm -lnosys 
